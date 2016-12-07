@@ -1,3 +1,7 @@
+e_ceasy_cloud:
+    resource: "@ECeasyCloudBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
