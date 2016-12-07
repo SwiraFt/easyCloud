@@ -1,0 +1,21 @@
+EC\easyCloudBundle\Entity\User:
+    type: entity
+    table: null
+    repositoryClass: EC\easyCloudBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        pseudo:
+            type: string
+            length: '30'
+            unique: true
+        pass:
+            type: string
+            length: '10'
+        derniereCo:
+            type: date
+    lifecycleCallbacks: {  }

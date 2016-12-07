@@ -1,3 +1,14 @@
-e_ceasy_cloud_homepage:
+e_ceasy_cloud_default:
     path:     /
     defaults: { _controller: ECeasyCloudBundle:Default:index }
+
+e_ceasy_cloud_inscription:
+   path:     /inscription
+   defaults: { _controller: ECeasyCloudBundle:inscription:index }
+   methods:   [GET]
+
+
+e_ceasy_cloud_inscriptionPost:
+   path:     /inscription
+   defaults: { _controller: ECeasyCloudBundle:User:AjoutUtilisateur }
+   methods:   [POST]
