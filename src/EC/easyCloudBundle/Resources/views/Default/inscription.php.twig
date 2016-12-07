@@ -16,14 +16,14 @@
 			<?php include("menu.php"); ?>
 
 			<!-- //Corps -->
-			<div class="jumbotron">
+			<div>
 			  <form class="inscription" action="/inscription" method="post">
 
 				<label for="inputUserName class="sr-only">Nom d'Utilisateur</label>
-				<input type="text" id="inputUserName" class="form-control" placeholder="Nom d'Utilisateur" required autofocus>
+				<input type="text" name="pseudo" class="form-control" placeholder="Nom d'Utilisateur" required autofocus>
 
 				<label for="inputPassword" class="sr-only">Mot de Passe</label>
-				<input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required autofocus>
+				<input type="password" name="pass"  class="form-control" placeholder="Mot de passe" required autofocus>
 
 				<button type="submit">S'inscrire</button>
 			  </form>

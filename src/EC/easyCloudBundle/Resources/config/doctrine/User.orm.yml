@@ -17,5 +17,5 @@ EC\easyCloudBundle\Entity\User:
             type: string
             length: '10'
         derniereCo:
-            type: date
+            type: datetime
     lifecycleCallbacks: {  }

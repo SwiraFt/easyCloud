@@ -23,7 +23,7 @@ class User
     private $pass;
 
     /**
-     * @var \Date
+     * @var \DateTime
      */
     private $derniereCo;
 
