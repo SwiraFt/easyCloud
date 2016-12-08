@@ -21,6 +21,7 @@ class UserController extends Controller
     $User= new User();
     $User->setPseudo($requete['pseudo']);
     $User->setPass($requete['pass']);
+    $User->setMail($requete['mail']);
     $User->setDerniereCo(DateTime::createFromFormat('j-M-Y', date('j-M-Y')));
 
     $em = $this->getDoctrine()->getManager();
@@ -28,24 +29,6 @@ class UserController extends Controller
     $em->flush();
 
     return new Response('L\'utilisateur à été enregistré avec l\'id : '. $User->getId());
-
-  /*  $param = $request->request->all();
-
-    $User = new User();
-    $User->setPseudo($param['inputUserName']);
-    $User->setPass($param['inputPassword']);
-
-
-    $User->setDerniereCo(DateTime::createFromFormat('j-M-Y', '15-Feb-2009'));
-
-    $em = $this->getDoctrine()->getManager();
-
-    $em->persist($User);
-
-    $em->flush();
-
-    */
-
 
   }
 

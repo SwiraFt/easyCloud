@@ -1,5 +1,43 @@
+<!DOCTYPE html>
 <html>
- <body>
-Hello World!
-</body>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="HandheldFriendly" content="true" />
+		<link rel="stylesheet" href="{{ asset('bundles/style/css/bootstrap.css') }}" />
+
+		<title>Accueil</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<!-- inclusion de la page menu.html-->
+			{% include 'commun/menu.html' %}
+
+    <!-- corp -->
+			<div class="jumbotron">
+				 <form class="form-signin" action="authentification" method="post">
+					<h2 class="form-signin-heading">Enregistrez vous</h2>
+
+					<label for="inputEmail" class="sr-only">Adresse Email</label>
+					<input type="username" id="inputEmail" class="form-control" placeholder="Adresse email" required autofocus>
+
+					<label for="inputPassword" class="sr-only">Mot de Passe</label>
+					<input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required autofocus>
+
+					<div class="checkbox">
+					  <label>
+						<input type="checkbox" value="remember-me"> Se souvenir de moi
+					  </label>
+					</div>
+
+					<button class="btn btn-lg btn-primary btn-block" type="submit">S'enregistrer</button>
+				</form>
+					<p><a href="/inscription">Je n'ai pas encore de compte, je veux m'inscrire</a></p>
+			</div> <!-- /jumbotron -->
+		</div> <!-- /container -->
+
+		<!-- inclusion de la page piedDePage.html-->
+			{% include 'commun/piedDePage.html' %}
+	</body>
 </html>

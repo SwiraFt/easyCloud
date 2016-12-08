@@ -23,6 +23,11 @@ class User
     private $pass;
 
     /**
+     * @var string
+     */
+    private $mail;
+
+    /**
      * @var \DateTime
      */
     private $derniereCo;
@@ -87,6 +92,30 @@ class User
     }
 
     /**
+     * Set mail
+     *
+     * @param string $mail
+     *
+     * @return User
+     */
+    public function setMail($mail)
+    {
+        $this->mail = $mail;
+
+        return $this;
+    }
+
+    /**
+     * Get mail
+     *
+     * @return string
+     */
+    public function getMail()
+    {
+        return $this->mail;
+    }
+
+    /**
      * Set derniereCo
      *
      * @param \DateTime $derniereCo
@@ -110,3 +139,4 @@ class User
         return $this->derniereCo;
     }
 }
+

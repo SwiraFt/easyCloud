@@ -15,7 +15,11 @@ EC\easyCloudBundle\Entity\User:
             unique: true
         pass:
             type: string
-            length: '10'
+            length: '30'
+        mail:
+            type: string
+            length: '100'
+            unique: true
         derniereCo:
-            type: datetime
+            type: date
     lifecycleCallbacks: {  }
