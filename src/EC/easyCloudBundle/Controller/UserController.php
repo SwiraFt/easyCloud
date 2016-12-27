@@ -18,17 +18,25 @@ class UserController extends Controller
 
     //return new Response ('NB param: ' .count($requete). ' '. $request);
 
-    $User= new User();
-    $User->setPseudo($requete['pseudo']);
-    $User->setPass($requete['pass']);
-    $User->setMail($requete['mail']);
-    $User->setDerniereCo(DateTime::createFromFormat('j-M-Y', date('j-M-Y')));
+    if($requete['pseudo'] != NULL && $requete['pass'] != NULL  && $requete['mail'] != NULL){
+      $User= new User();
+      $User->setPseudo($requete['pseudo']);
+      $User->setPass($requete['pass']);
+      $User->setMail($requete['mail']);
+      $User->setDerniereCo(DateTime::createFromFormat('j-M-Y', date('j-M-Y')));
 
-    $em = $this->getDoctrine()->getManager();
-    $em->persist($User);
-    $em->flush();
 
-    return new Response('L\'utilisateur à été enregistré avec l\'id : '. $User->getId());
+      $em = $this->getDoctrine()->getManager();
+      $em->persist($User);
+      $em->flush();
+
+      return new Response('L\'utilisateur à été enregistré avec l\'id : '. $User->getId());
+    }
+
+    else{
+      
+    }
+
 
   }
 

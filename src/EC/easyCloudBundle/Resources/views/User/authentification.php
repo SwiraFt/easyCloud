@@ -11,10 +11,10 @@
 
 	<body>
 		<div class="container">
-			
+
 			// Fichier du menu
 			<?php include("menu.php"); ?>
-			
+
 			//Corps
 			<div class="jumbotron">
 				<h1>Bienvenue sur easyCloud
@@ -22,11 +22,11 @@
 				</h1>
 				<p>Ce cloud a été conçu pour partager des fichiers,
 					tu peux acceder à ton repertoire,
-					<a href="repertoire.php">clique ici</a>
+					<a href="/repertoire">clique ici</a>
 				</p>
 			</div> <!-- /jumbotron -->
 		</div> <!-- /container -->
-			
+
 			// Fichier de pied de page
 			<?php include("piedDePage.php"); ?>
 	</body>
