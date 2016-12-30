@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\HttpFoundation\Session\Session;
 use EC\easyCloudBundle\Entity\User;
 use \DateTime;
 
@@ -87,6 +88,8 @@ class UserController extends Controller
     $User = $this->getDoctrine()->getRepository('ECeasyCloudBundle:User')->findByPseudo($requete['pseudo']);
 
     if(strcmp($User[0]->getPass(), $requete['pass'] == 0)){
+      $session = $request->getSession();
+      $session->set('pseudo', $User[0]->getPseudo());
       return $this->redirect('/repertoire');
     }
 
