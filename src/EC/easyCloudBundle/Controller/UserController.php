@@ -12,7 +12,7 @@ use \DateTime;
 
 class UserController extends Controller
 {
-  public function AjoutUtilisateurAction(Request $request){
+  public function ajoutUtilisateurAction(Request $request){
 
     $requete = $request->request->all();
 
@@ -79,5 +79,25 @@ class UserController extends Controller
     }
 
   }
+
+  public function authentificationUtilisateurAction (Request $request){
+
+    $requete = $request->request->all();
+
+    $User = $this->getDoctrine()->getRepository('ECeasyCloudBundle:User')->findByPseudo($requete['pseudo']);
+
+    if(strcmp($User[0]->getPass(), $requete['pass'] == 0)){
+      return $this->redirect('/repertoire');
+    }
+
+    else{
+    return $this->render('ECeasyCloudBundle:Default:index.html.twig', array('info' => 'Aucune combinaison Nom d\'utilisateur/Mot de passe trouvée.'));
+    }
+
+
+
+  }
+
+
 }
  ?>

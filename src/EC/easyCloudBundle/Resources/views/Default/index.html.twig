@@ -18,24 +18,18 @@
 			<div class="jumbotron">
 				<div >
 					{{ info }}
-					</br>
+				</br>
 				</div>
-				 <form class="form-signin" action="authentification" method="post">
+				 <form class="form-signin" action="/authentification" method="post">
 					<h2 class="form-signin-heading">Authentifiez-vous</h2>
 
-					<label for="inputEmail" class="sr-only">Adresse Email</label>
-					<input type="username" id="inputEmail" class="form-control" placeholder="Adresse email" required autofocus>
+					<label for="inputUserName" class="sr-only">Nom d'Utilisateur</label>
+					<input type="text" name="pseudo" class="form-control" placeholder="Nom d'Utilisateur" required autofocus>
 
 					<label for="inputPassword" class="sr-only">Mot de Passe</label>
-					<input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required autofocus>
+					<input type="password" name="pass" class="form-control" placeholder="Mot de passe" required autofocus>
 
-					<div class="checkbox">
-					  <label>
-						<input type="checkbox" value="remember-me"> Se souvenir de moi
-					  </label>
-					</div>
-
-					<button class="btn btn-lg btn-primary btn-block" type="submit">S'enregistrer</button>
+					<button class="btn btn-lg btn-primary btn-block" type="submit">Connexion</button>
 				</form>
 					<p><a href="/inscription">Je n'ai pas encore de compte, je veux m'inscrire</a></p>
 			</div> <!-- /jumbotron -->

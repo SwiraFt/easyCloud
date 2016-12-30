@@ -133,11 +133,33 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     goto not_e_ceasy_cloud_inscriptionPost;
                 }
 
-                return array (  '_controller' => 'EC\\easyCloudBundle\\Controller\\UserController::AjoutUtilisateurAction',  '_route' => 'e_ceasy_cloud_inscriptionPost',);
+                return array (  '_controller' => 'EC\\easyCloudBundle\\Controller\\UserController::ajoutUtilisateurAction',  '_route' => 'e_ceasy_cloud_inscriptionPost',);
             }
             not_e_ceasy_cloud_inscriptionPost:
 
         }
+
+        // e_ceasy_cloud_authentification
+        if ($pathinfo === '/authentification') {
+            if ($this->context->getMethod() != 'POST') {
+                $allow[] = 'POST';
+                goto not_e_ceasy_cloud_authentification;
+            }
+
+            return array (  '_controller' => 'EC\\easyCloudBundle\\Controller\\UserController::authentificationUtilisateurAction',  '_route' => 'e_ceasy_cloud_authentification',);
+        }
+        not_e_ceasy_cloud_authentification:
+
+        // e_ceasy_cloud_repertoire
+        if ($pathinfo === '/repertoire') {
+            if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                $allow = array_merge($allow, array('GET', 'HEAD'));
+                goto not_e_ceasy_cloud_repertoire;
+            }
+
+            return array (  '_controller' => 'EC\\easyCloudBundle\\Controller\\RepertoireController::afficherRepertoireAction',  '_route' => 'e_ceasy_cloud_repertoire',);
+        }
+        not_e_ceasy_cloud_repertoire:
 
         // homepage
         if (rtrim($pathinfo, '/') === '') {

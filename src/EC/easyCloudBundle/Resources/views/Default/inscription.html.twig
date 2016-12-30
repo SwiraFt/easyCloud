@@ -23,8 +23,9 @@
 				</div>
 
 			  <form class="inscription" action="/inscription" method="post">
+				<h2 class="form-signin-heading">Enregistrez-vous</h2>
 
-				<label for="inputUserName class="sr-only">Nom d'Utilisateur</label>
+				<label for="inputUserName" class="sr-only">Nom d'Utilisateur</label>
 				<input type="text" name="pseudo" class="form-control" {% if pseudo != '' %} value={{ pseudo }} {% endif %} placeholder="Nom d'Utilisateur" required autofocus>
 
 				<label for="inputPassword" class="sr-only">Mot de passe</label>
@@ -36,7 +37,7 @@
 				<label for="inputUserName class="sr-only">Email</label>
 				<input type="text" name="mail" class="form-control" {% if mail != '' %} value={{ mail }} {% endif %} placeholder="Adresse Mail" required autofocus>
 
-				<button type="submit">S'inscrire</button>
+				<button class="btn btn-lg btn-primary btn-block" type="submit">S'inscrire</button>
 			  </form>
 			</div> <!-- /jumbotron -->
 		</div> <!-- /container -->

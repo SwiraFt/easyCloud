@@ -10,5 +10,15 @@ e_ceasy_cloud_inscription:
 
 e_ceasy_cloud_inscriptionPost:
    path:     /inscription
-   defaults: { _controller: ECeasyCloudBundle:User:AjoutUtilisateur }
+   defaults: { _controller: ECeasyCloudBundle:User:ajoutUtilisateur }
    methods:   [POST]
+
+e_ceasy_cloud_authentification:
+   path:     /authentification
+   defaults: { _controller: ECeasyCloudBundle:User:authentificationUtilisateur }
+   methods:   [POST]
+
+e_ceasy_cloud_repertoire:
+   path:     /repertoire
+   defaults: { _controller: ECeasyCloudBundle:Repertoire:afficherRepertoire }
+   methods:   [GET]

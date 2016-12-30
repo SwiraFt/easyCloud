@@ -15,11 +15,11 @@ class __TwigTemplate_b78dfcdbcb13df30f815364d51c076cc2d38dc9b78aef6b78d4abc74f6a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_236b0d632f5936d1763cd19d54bc6f8bed88f36dfd982ebf9bbcf651c67416ac = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_236b0d632f5936d1763cd19d54bc6f8bed88f36dfd982ebf9bbcf651c67416ac->enter($__internal_236b0d632f5936d1763cd19d54bc6f8bed88f36dfd982ebf9bbcf651c67416ac_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ECeasyCloudBundle:Default:index.html.twig"));
+        $__internal_df820d6bee3f1dd3087f4a7e69eed5f4152240b349fe2d3fdf8838ed625c7caf = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_df820d6bee3f1dd3087f4a7e69eed5f4152240b349fe2d3fdf8838ed625c7caf->enter($__internal_df820d6bee3f1dd3087f4a7e69eed5f4152240b349fe2d3fdf8838ed625c7caf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ECeasyCloudBundle:Default:index.html.twig"));
 
-        $__internal_dbda85418b9331be7d5b5e3cd4de167881aa8a60e9e77b199824176818089529 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_dbda85418b9331be7d5b5e3cd4de167881aa8a60e9e77b199824176818089529->enter($__internal_dbda85418b9331be7d5b5e3cd4de167881aa8a60e9e77b199824176818089529_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ECeasyCloudBundle:Default:index.html.twig"));
+        $__internal_72e211f7d0f64c15b7b2bc037da0135cb8610194a81d608b16646876fd748a5e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_72e211f7d0f64c15b7b2bc037da0135cb8610194a81d608b16646876fd748a5e->enter($__internal_72e211f7d0f64c15b7b2bc037da0135cb8610194a81d608b16646876fd748a5e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ECeasyCloudBundle:Default:index.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -51,24 +51,18 @@ class __TwigTemplate_b78dfcdbcb13df30f815364d51c076cc2d38dc9b78aef6b78d4abc74f6a
         // line 20
         echo twig_escape_filter($this->env, ($context["info"] ?? $this->getContext($context, "info")), "html", null, true);
         echo "
-\t\t\t\t\t</br>
+\t\t\t\t</br>
 \t\t\t\t</div>
-\t\t\t\t <form class=\"form-signin\" action=\"authentification\" method=\"post\">
+\t\t\t\t <form class=\"form-signin\" action=\"/authentification\" method=\"post\">
 \t\t\t\t\t<h2 class=\"form-signin-heading\">Authentifiez-vous</h2>
 
-\t\t\t\t\t<label for=\"inputEmail\" class=\"sr-only\">Adresse Email</label>
-\t\t\t\t\t<input type=\"username\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Adresse email\" required autofocus>
+\t\t\t\t\t<label for=\"inputUserName\" class=\"sr-only\">Nom d'Utilisateur</label>
+\t\t\t\t\t<input type=\"text\" name=\"pseudo\" class=\"form-control\" placeholder=\"Nom d'Utilisateur\" required autofocus>
 
 \t\t\t\t\t<label for=\"inputPassword\" class=\"sr-only\">Mot de Passe</label>
-\t\t\t\t\t<input type=\"password\" id=\"inputPassword\" class=\"form-control\" placeholder=\"Mot de passe\" required autofocus>
+\t\t\t\t\t<input type=\"password\" name=\"pass\" class=\"form-control\" placeholder=\"Mot de passe\" required autofocus>
 
-\t\t\t\t\t<div class=\"checkbox\">
-\t\t\t\t\t  <label>
-\t\t\t\t\t\t<input type=\"checkbox\" value=\"remember-me\"> Se souvenir de moi
-\t\t\t\t\t  </label>
-\t\t\t\t\t</div>
-
-\t\t\t\t\t<button class=\"btn btn-lg btn-primary btn-block\" type=\"submit\">S'enregistrer</button>
+\t\t\t\t\t<button class=\"btn btn-lg btn-primary btn-block\" type=\"submit\">Connexion</button>
 \t\t\t\t</form>
 \t\t\t\t\t<p><a href=\"/inscription\">Je n'ai pas encore de compte, je veux m'inscrire</a></p>
 \t\t\t</div> <!-- /jumbotron -->
@@ -76,17 +70,17 @@ class __TwigTemplate_b78dfcdbcb13df30f815364d51c076cc2d38dc9b78aef6b78d4abc74f6a
 
 \t\t<!-- inclusion de la page piedDePage.html-->
 \t\t\t";
-        // line 45
-        $this->loadTemplate("commun/piedDePage.html", "ECeasyCloudBundle:Default:index.html.twig", 45)->display($context);
-        // line 46
+        // line 39
+        $this->loadTemplate("commun/piedDePage.html", "ECeasyCloudBundle:Default:index.html.twig", 39)->display($context);
+        // line 40
         echo "\t</body>
 </html>
 ";
         
-        $__internal_236b0d632f5936d1763cd19d54bc6f8bed88f36dfd982ebf9bbcf651c67416ac->leave($__internal_236b0d632f5936d1763cd19d54bc6f8bed88f36dfd982ebf9bbcf651c67416ac_prof);
+        $__internal_df820d6bee3f1dd3087f4a7e69eed5f4152240b349fe2d3fdf8838ed625c7caf->leave($__internal_df820d6bee3f1dd3087f4a7e69eed5f4152240b349fe2d3fdf8838ed625c7caf_prof);
 
         
-        $__internal_dbda85418b9331be7d5b5e3cd4de167881aa8a60e9e77b199824176818089529->leave($__internal_dbda85418b9331be7d5b5e3cd4de167881aa8a60e9e77b199824176818089529_prof);
+        $__internal_72e211f7d0f64c15b7b2bc037da0135cb8610194a81d608b16646876fd748a5e->leave($__internal_72e211f7d0f64c15b7b2bc037da0135cb8610194a81d608b16646876fd748a5e_prof);
 
     }
 
@@ -102,7 +96,7 @@ class __TwigTemplate_b78dfcdbcb13df30f815364d51c076cc2d38dc9b78aef6b78d4abc74f6a
 
     public function getDebugInfo()
     {
-        return array (  82 => 46,  80 => 45,  52 => 20,  46 => 16,  44 => 15,  33 => 7,  25 => 1,);
+        return array (  76 => 40,  74 => 39,  52 => 20,  46 => 16,  44 => 15,  33 => 7,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -135,24 +129,18 @@ class __TwigTemplate_b78dfcdbcb13df30f815364d51c076cc2d38dc9b78aef6b78d4abc74f6a
 \t\t\t<div class=\"jumbotron\">
 \t\t\t\t<div >
 \t\t\t\t\t{{ info }}
-\t\t\t\t\t</br>
+\t\t\t\t</br>
 \t\t\t\t</div>
-\t\t\t\t <form class=\"form-signin\" action=\"authentification\" method=\"post\">
+\t\t\t\t <form class=\"form-signin\" action=\"/authentification\" method=\"post\">
 \t\t\t\t\t<h2 class=\"form-signin-heading\">Authentifiez-vous</h2>
 
-\t\t\t\t\t<label for=\"inputEmail\" class=\"sr-only\">Adresse Email</label>
-\t\t\t\t\t<input type=\"username\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Adresse email\" required autofocus>
+\t\t\t\t\t<label for=\"inputUserName\" class=\"sr-only\">Nom d'Utilisateur</label>
+\t\t\t\t\t<input type=\"text\" name=\"pseudo\" class=\"form-control\" placeholder=\"Nom d'Utilisateur\" required autofocus>
 
 \t\t\t\t\t<label for=\"inputPassword\" class=\"sr-only\">Mot de Passe</label>
-\t\t\t\t\t<input type=\"password\" id=\"inputPassword\" class=\"form-control\" placeholder=\"Mot de passe\" required autofocus>
+\t\t\t\t\t<input type=\"password\" name=\"pass\" class=\"form-control\" placeholder=\"Mot de passe\" required autofocus>
 
-\t\t\t\t\t<div class=\"checkbox\">
-\t\t\t\t\t  <label>
-\t\t\t\t\t\t<input type=\"checkbox\" value=\"remember-me\"> Se souvenir de moi
-\t\t\t\t\t  </label>
-\t\t\t\t\t</div>
-
-\t\t\t\t\t<button class=\"btn btn-lg btn-primary btn-block\" type=\"submit\">S'enregistrer</button>
+\t\t\t\t\t<button class=\"btn btn-lg btn-primary btn-block\" type=\"submit\">Connexion</button>
 \t\t\t\t</form>
 \t\t\t\t\t<p><a href=\"/inscription\">Je n'ai pas encore de compte, je veux m'inscrire</a></p>
 \t\t\t</div> <!-- /jumbotron -->

@@ -15,11 +15,11 @@ class __TwigTemplate_cec3a50f9b2b5467ffdbcbe2718fcc6a110554972d104c1f072c4b8f40c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_90ea78f5013c2a056093781ddbd7ed364ad1d4250f1b33f5a2fb883a64a529e5 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_90ea78f5013c2a056093781ddbd7ed364ad1d4250f1b33f5a2fb883a64a529e5->enter($__internal_90ea78f5013c2a056093781ddbd7ed364ad1d4250f1b33f5a2fb883a64a529e5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ECeasyCloudBundle:Default:inscription.html.twig"));
+        $__internal_c00be61e05a1dda914aaa66df0fa95d2639677421203cba62ff5f03483d4dbb8 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_c00be61e05a1dda914aaa66df0fa95d2639677421203cba62ff5f03483d4dbb8->enter($__internal_c00be61e05a1dda914aaa66df0fa95d2639677421203cba62ff5f03483d4dbb8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ECeasyCloudBundle:Default:inscription.html.twig"));
 
-        $__internal_f511e19cecfb7ff2b309f12d9d88fd0383a9636f7411c1efaf8d30e730527e04 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_f511e19cecfb7ff2b309f12d9d88fd0383a9636f7411c1efaf8d30e730527e04->enter($__internal_f511e19cecfb7ff2b309f12d9d88fd0383a9636f7411c1efaf8d30e730527e04_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ECeasyCloudBundle:Default:inscription.html.twig"));
+        $__internal_022f8fde94ba5ac46e1a6d55ff13b99fc9a80fac5cb8ce92f970df6513bb9486 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_022f8fde94ba5ac46e1a6d55ff13b99fc9a80fac5cb8ce92f970df6513bb9486->enter($__internal_022f8fde94ba5ac46e1a6d55ff13b99fc9a80fac5cb8ce92f970df6513bb9486_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ECeasyCloudBundle:Default:inscription.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -56,10 +56,11 @@ class __TwigTemplate_cec3a50f9b2b5467ffdbcbe2718fcc6a110554972d104c1f072c4b8f40c
 \t\t\t\t</div>
 
 \t\t\t  <form class=\"inscription\" action=\"/inscription\" method=\"post\">
+\t\t\t\t<h2 class=\"form-signin-heading\">Enregistrez-vous</h2>
 
-\t\t\t\t<label for=\"inputUserName class=\"sr-only\">Nom d'Utilisateur</label>
+\t\t\t\t<label for=\"inputUserName\" class=\"sr-only\">Nom d'Utilisateur</label>
 \t\t\t\t<input type=\"text\" name=\"pseudo\" class=\"form-control\" ";
-        // line 28
+        // line 29
         if ((($context["pseudo"] ?? $this->getContext($context, "pseudo")) != "")) {
             echo " value=";
             echo twig_escape_filter($this->env, ($context["pseudo"] ?? $this->getContext($context, "pseudo")), "html", null, true);
@@ -69,7 +70,7 @@ class __TwigTemplate_cec3a50f9b2b5467ffdbcbe2718fcc6a110554972d104c1f072c4b8f40c
 
 \t\t\t\t<label for=\"inputPassword\" class=\"sr-only\">Mot de passe</label>
 \t\t\t\t<input type=\"password\" name=\"pass\"  class=\"form-control\" ";
-        // line 31
+        // line 32
         if ((($context["pass"] ?? $this->getContext($context, "pass")) != "")) {
             echo " value=";
             echo twig_escape_filter($this->env, ($context["pass"] ?? $this->getContext($context, "pass")), "html", null, true);
@@ -79,7 +80,7 @@ class __TwigTemplate_cec3a50f9b2b5467ffdbcbe2718fcc6a110554972d104c1f072c4b8f40c
 
 \t\t\t\t<label for=\"inputPassword\" class=\"sr-only\">Confirmer le mot de passe</label>
 \t\t\t\t<input type=\"password\" name=\"passConf\"  class=\"form-control\" ";
-        // line 34
+        // line 35
         if ((($context["passConf"] ?? $this->getContext($context, "passConf")) != "")) {
             echo " value=";
             echo twig_escape_filter($this->env, ($context["passConf"] ?? $this->getContext($context, "passConf")), "html", null, true);
@@ -89,7 +90,7 @@ class __TwigTemplate_cec3a50f9b2b5467ffdbcbe2718fcc6a110554972d104c1f072c4b8f40c
 
 \t\t\t\t<label for=\"inputUserName class=\"sr-only\">Email</label>
 \t\t\t\t<input type=\"text\" name=\"mail\" class=\"form-control\" ";
-        // line 37
+        // line 38
         if ((($context["mail"] ?? $this->getContext($context, "mail")) != "")) {
             echo " value=";
             echo twig_escape_filter($this->env, ($context["mail"] ?? $this->getContext($context, "mail")), "html", null, true);
@@ -97,24 +98,24 @@ class __TwigTemplate_cec3a50f9b2b5467ffdbcbe2718fcc6a110554972d104c1f072c4b8f40c
         }
         echo " placeholder=\"Adresse Mail\" required autofocus>
 
-\t\t\t\t<button type=\"submit\">S'inscrire</button>
+\t\t\t\t<button class=\"btn btn-lg btn-primary btn-block\" type=\"submit\">S'inscrire</button>
 \t\t\t  </form>
 \t\t\t</div> <!-- /jumbotron -->
 \t\t</div> <!-- /container -->
 
 \t\t<!-- inclusion de la page piedDePage.html-->
 \t\t\t";
-        // line 45
-        $this->loadTemplate("commun/piedDePage.html", "ECeasyCloudBundle:Default:inscription.html.twig", 45)->display($context);
         // line 46
+        $this->loadTemplate("commun/piedDePage.html", "ECeasyCloudBundle:Default:inscription.html.twig", 46)->display($context);
+        // line 47
         echo "\t</body>
 </html>
 ";
         
-        $__internal_90ea78f5013c2a056093781ddbd7ed364ad1d4250f1b33f5a2fb883a64a529e5->leave($__internal_90ea78f5013c2a056093781ddbd7ed364ad1d4250f1b33f5a2fb883a64a529e5_prof);
+        $__internal_c00be61e05a1dda914aaa66df0fa95d2639677421203cba62ff5f03483d4dbb8->leave($__internal_c00be61e05a1dda914aaa66df0fa95d2639677421203cba62ff5f03483d4dbb8_prof);
 
         
-        $__internal_f511e19cecfb7ff2b309f12d9d88fd0383a9636f7411c1efaf8d30e730527e04->leave($__internal_f511e19cecfb7ff2b309f12d9d88fd0383a9636f7411c1efaf8d30e730527e04_prof);
+        $__internal_022f8fde94ba5ac46e1a6d55ff13b99fc9a80fac5cb8ce92f970df6513bb9486->leave($__internal_022f8fde94ba5ac46e1a6d55ff13b99fc9a80fac5cb8ce92f970df6513bb9486_prof);
 
     }
 
@@ -130,7 +131,7 @@ class __TwigTemplate_cec3a50f9b2b5467ffdbcbe2718fcc6a110554972d104c1f072c4b8f40c
 
     public function getDebugInfo()
     {
-        return array (  110 => 46,  108 => 45,  93 => 37,  83 => 34,  73 => 31,  63 => 28,  53 => 21,  47 => 17,  45 => 16,  33 => 7,  25 => 1,);
+        return array (  111 => 47,  109 => 46,  94 => 38,  84 => 35,  74 => 32,  64 => 29,  53 => 21,  47 => 17,  45 => 16,  33 => 7,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -168,8 +169,9 @@ class __TwigTemplate_cec3a50f9b2b5467ffdbcbe2718fcc6a110554972d104c1f072c4b8f40c
 \t\t\t\t</div>
 
 \t\t\t  <form class=\"inscription\" action=\"/inscription\" method=\"post\">
+\t\t\t\t<h2 class=\"form-signin-heading\">Enregistrez-vous</h2>
 
-\t\t\t\t<label for=\"inputUserName class=\"sr-only\">Nom d'Utilisateur</label>
+\t\t\t\t<label for=\"inputUserName\" class=\"sr-only\">Nom d'Utilisateur</label>
 \t\t\t\t<input type=\"text\" name=\"pseudo\" class=\"form-control\" {% if pseudo != '' %} value={{ pseudo }} {% endif %} placeholder=\"Nom d'Utilisateur\" required autofocus>
 
 \t\t\t\t<label for=\"inputPassword\" class=\"sr-only\">Mot de passe</label>
@@ -181,7 +183,7 @@ class __TwigTemplate_cec3a50f9b2b5467ffdbcbe2718fcc6a110554972d104c1f072c4b8f40c
 \t\t\t\t<label for=\"inputUserName class=\"sr-only\">Email</label>
 \t\t\t\t<input type=\"text\" name=\"mail\" class=\"form-control\" {% if mail != '' %} value={{ mail }} {% endif %} placeholder=\"Adresse Mail\" required autofocus>
 
-\t\t\t\t<button type=\"submit\">S'inscrire</button>
+\t\t\t\t<button class=\"btn btn-lg btn-primary btn-block\" type=\"submit\">S'inscrire</button>
 \t\t\t  </form>
 \t\t\t</div> <!-- /jumbotron -->
 \t\t</div> <!-- /container -->

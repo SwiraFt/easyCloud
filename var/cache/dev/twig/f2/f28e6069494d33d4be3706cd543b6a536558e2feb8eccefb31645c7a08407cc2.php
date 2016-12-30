@@ -15,11 +15,11 @@ class __TwigTemplate_3ddca9491a53f994d819a4a09b2ab3e4c7b491511485060d8d3a2f6e356
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4e58a20ca18dbaa493645623cc07169a96d7c124af48310c3a38084c96ee189b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_4e58a20ca18dbaa493645623cc07169a96d7c124af48310c3a38084c96ee189b->enter($__internal_4e58a20ca18dbaa493645623cc07169a96d7c124af48310c3a38084c96ee189b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "commun/menu.html"));
+        $__internal_4daf3316f67c43831ca8218c0bef635f8b82058f5fd92018c0cc6cb1d5c0f43d = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_4daf3316f67c43831ca8218c0bef635f8b82058f5fd92018c0cc6cb1d5c0f43d->enter($__internal_4daf3316f67c43831ca8218c0bef635f8b82058f5fd92018c0cc6cb1d5c0f43d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "commun/menu.html"));
 
-        $__internal_9c08a65573c73847aaf1503d7bbb2fdf7607a259317c08355c28e7a1661ad0b3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_9c08a65573c73847aaf1503d7bbb2fdf7607a259317c08355c28e7a1661ad0b3->enter($__internal_9c08a65573c73847aaf1503d7bbb2fdf7607a259317c08355c28e7a1661ad0b3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "commun/menu.html"));
+        $__internal_c5ab039944c734acea06d96238b6bc5ccda49753889af48cb0f392e46dca6f6c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c5ab039944c734acea06d96238b6bc5ccda49753889af48cb0f392e46dca6f6c->enter($__internal_c5ab039944c734acea06d96238b6bc5ccda49753889af48cb0f392e46dca6f6c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "commun/menu.html"));
 
         // line 1
         echo "<nav class=\"navbar navbar-default\">
@@ -31,11 +31,11 @@ class __TwigTemplate_3ddca9491a53f994d819a4a09b2ab3e4c7b491511485060d8d3a2f6e356
               <span class=\"icon-bar\"></span>
               <span class=\"icon-bar\"></span>
             </button>
-            <a class=\"navbar-brand\" href=\"#\">Easy Cloud</a>
+            <a class=\"navbar-brand\" href=\"/repertoire\">Easy Cloud</a>
           </div>
           <div id=\"navbar\" class=\"navbar-collapse collapse\">
             <ul class=\"nav navbar-nav\">
-              <li class=\"active\"><a href=\"/\">Accueil</a></li>
+              <li ><a href=\"/\">Accueil</a></li>
 \t\t\t  <li><a href=\"/inscription\">Inscription</a></li>
 \t\t\t  <li><a href=\"/\">Authentification</a></li>
               <li><a href=\"/repertoire\">Mon repertoire</a></li>
@@ -45,10 +45,10 @@ class __TwigTemplate_3ddca9491a53f994d819a4a09b2ab3e4c7b491511485060d8d3a2f6e356
 </nav>
 ";
         
-        $__internal_4e58a20ca18dbaa493645623cc07169a96d7c124af48310c3a38084c96ee189b->leave($__internal_4e58a20ca18dbaa493645623cc07169a96d7c124af48310c3a38084c96ee189b_prof);
+        $__internal_4daf3316f67c43831ca8218c0bef635f8b82058f5fd92018c0cc6cb1d5c0f43d->leave($__internal_4daf3316f67c43831ca8218c0bef635f8b82058f5fd92018c0cc6cb1d5c0f43d_prof);
 
         
-        $__internal_9c08a65573c73847aaf1503d7bbb2fdf7607a259317c08355c28e7a1661ad0b3->leave($__internal_9c08a65573c73847aaf1503d7bbb2fdf7607a259317c08355c28e7a1661ad0b3_prof);
+        $__internal_c5ab039944c734acea06d96238b6bc5ccda49753889af48cb0f392e46dca6f6c->leave($__internal_c5ab039944c734acea06d96238b6bc5ccda49753889af48cb0f392e46dca6f6c_prof);
 
     }
 
@@ -81,11 +81,11 @@ class __TwigTemplate_3ddca9491a53f994d819a4a09b2ab3e4c7b491511485060d8d3a2f6e356
               <span class=\"icon-bar\"></span>
               <span class=\"icon-bar\"></span>
             </button>
-            <a class=\"navbar-brand\" href=\"#\">Easy Cloud</a>
+            <a class=\"navbar-brand\" href=\"/repertoire\">Easy Cloud</a>
           </div>
           <div id=\"navbar\" class=\"navbar-collapse collapse\">
             <ul class=\"nav navbar-nav\">
-              <li class=\"active\"><a href=\"/\">Accueil</a></li>
+              <li ><a href=\"/\">Accueil</a></li>
 \t\t\t  <li><a href=\"/inscription\">Inscription</a></li>
 \t\t\t  <li><a href=\"/\">Authentification</a></li>
               <li><a href=\"/repertoire\">Mon repertoire</a></li>
