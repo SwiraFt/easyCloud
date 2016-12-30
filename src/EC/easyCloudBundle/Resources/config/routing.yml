@@ -12,3 +12,10 @@ e_ceasy_cloud_inscriptionPost:
    path:     /inscription
    defaults: { _controller: ECeasyCloudBundle:User:AjoutUtilisateur }
    methods:   [POST]
+
+
+e_ceasy_cloud_accueilPost:
+   path:     /authentication
+   defaults: { _controller: ECeasyCloudBundle:User:AuthentificationAction}
+   methods:   [POST]
+   

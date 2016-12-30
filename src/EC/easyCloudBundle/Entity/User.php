@@ -2,10 +2,12 @@
 
 namespace EC\easyCloudBundle\Entity;
 
+use Symfony\Component\Security\Core\User\UserInterface;
+use Doctrine\ORM\Mapping as ORM;
 /**
  * User
  */
-class User
+class User implements UserInterface, \Serializable
 {
     /**
      * @var int
@@ -62,7 +64,7 @@ class User
      *
      * @return string
      */
-    public function getPseudo()
+    public function getUsername()
     {
         return $this->pseudo;
     }
@@ -85,11 +87,12 @@ class User
      * Get pass
      *
      * @return string
-     */
-    public function getPass()
-    {
-        return $this->pass;
-    }
+     *
+  *  public function getPass()
+  *  {
+  *      return $this->pass;
+  *  }
+    */
 
     /**
      * Set mail
@@ -138,5 +141,48 @@ class User
     {
         return $this->derniereCo;
     }
-}
 
+    public function getPassword()
+    {
+        return $this->pass;
+    }
+
+    public function getSalt()
+   {
+       // you *may* need a real salt depending on your encoder
+       // see section on salt below
+       return null;
+   }
+
+    public function getRoles()
+    {
+        return array('ROLE_USER');
+    }
+
+    public function eraseCredentials()
+    {
+    }
+
+    /** @see \Serializable::serialize() */
+    public function serialize()
+    {
+        return serialize(array(
+            $this->id,
+            $this->pseudo,
+            $this->pass,
+            // see section on salt below
+            // $this->salt,
+        ));
+    }
+    public function unserialize($serialized)
+    {
+        list (
+            $this->id,
+            $this->pseudo,
+            $this->pass,
+            // see section on salt below
+            // $this->salt
+        ) = unserialize($serialized);
+    }
+
+}
