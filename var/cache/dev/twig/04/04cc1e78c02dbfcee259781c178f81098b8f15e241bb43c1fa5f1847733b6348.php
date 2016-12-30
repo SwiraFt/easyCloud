@@ -15,11 +15,11 @@ class __TwigTemplate_b78dfcdbcb13df30f815364d51c076cc2d38dc9b78aef6b78d4abc74f6a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2f765cbd02a0b1f311c7f8a991f9b1ba03b143c6e71bf6da739b80d49b35eccd = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_2f765cbd02a0b1f311c7f8a991f9b1ba03b143c6e71bf6da739b80d49b35eccd->enter($__internal_2f765cbd02a0b1f311c7f8a991f9b1ba03b143c6e71bf6da739b80d49b35eccd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ECeasyCloudBundle:Default:index.html.twig"));
+        $__internal_236b0d632f5936d1763cd19d54bc6f8bed88f36dfd982ebf9bbcf651c67416ac = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_236b0d632f5936d1763cd19d54bc6f8bed88f36dfd982ebf9bbcf651c67416ac->enter($__internal_236b0d632f5936d1763cd19d54bc6f8bed88f36dfd982ebf9bbcf651c67416ac_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ECeasyCloudBundle:Default:index.html.twig"));
 
-        $__internal_6917c900c54c97b11950e69ad812cd5a895b931e09249ce4b5e61d2d6ca5dcb9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_6917c900c54c97b11950e69ad812cd5a895b931e09249ce4b5e61d2d6ca5dcb9->enter($__internal_6917c900c54c97b11950e69ad812cd5a895b931e09249ce4b5e61d2d6ca5dcb9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ECeasyCloudBundle:Default:index.html.twig"));
+        $__internal_dbda85418b9331be7d5b5e3cd4de167881aa8a60e9e77b199824176818089529 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_dbda85418b9331be7d5b5e3cd4de167881aa8a60e9e77b199824176818089529->enter($__internal_dbda85418b9331be7d5b5e3cd4de167881aa8a60e9e77b199824176818089529_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ECeasyCloudBundle:Default:index.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -46,8 +46,15 @@ class __TwigTemplate_b78dfcdbcb13df30f815364d51c076cc2d38dc9b78aef6b78d4abc74f6a
         echo "
     <!-- corp -->
 \t\t\t<div class=\"jumbotron\">
+\t\t\t\t<div >
+\t\t\t\t\t";
+        // line 20
+        echo twig_escape_filter($this->env, ($context["info"] ?? $this->getContext($context, "info")), "html", null, true);
+        echo "
+\t\t\t\t\t</br>
+\t\t\t\t</div>
 \t\t\t\t <form class=\"form-signin\" action=\"authentification\" method=\"post\">
-\t\t\t\t\t<h2 class=\"form-signin-heading\">Enregistrez vous</h2>
+\t\t\t\t\t<h2 class=\"form-signin-heading\">Authentifiez-vous</h2>
 
 \t\t\t\t\t<label for=\"inputEmail\" class=\"sr-only\">Adresse Email</label>
 \t\t\t\t\t<input type=\"username\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Adresse email\" required autofocus>
@@ -69,17 +76,17 @@ class __TwigTemplate_b78dfcdbcb13df30f815364d51c076cc2d38dc9b78aef6b78d4abc74f6a
 
 \t\t<!-- inclusion de la page piedDePage.html-->
 \t\t\t";
-        // line 41
-        $this->loadTemplate("commun/piedDePage.html", "ECeasyCloudBundle:Default:index.html.twig", 41)->display($context);
-        // line 42
+        // line 45
+        $this->loadTemplate("commun/piedDePage.html", "ECeasyCloudBundle:Default:index.html.twig", 45)->display($context);
+        // line 46
         echo "\t</body>
 </html>
 ";
         
-        $__internal_2f765cbd02a0b1f311c7f8a991f9b1ba03b143c6e71bf6da739b80d49b35eccd->leave($__internal_2f765cbd02a0b1f311c7f8a991f9b1ba03b143c6e71bf6da739b80d49b35eccd_prof);
+        $__internal_236b0d632f5936d1763cd19d54bc6f8bed88f36dfd982ebf9bbcf651c67416ac->leave($__internal_236b0d632f5936d1763cd19d54bc6f8bed88f36dfd982ebf9bbcf651c67416ac_prof);
 
         
-        $__internal_6917c900c54c97b11950e69ad812cd5a895b931e09249ce4b5e61d2d6ca5dcb9->leave($__internal_6917c900c54c97b11950e69ad812cd5a895b931e09249ce4b5e61d2d6ca5dcb9_prof);
+        $__internal_dbda85418b9331be7d5b5e3cd4de167881aa8a60e9e77b199824176818089529->leave($__internal_dbda85418b9331be7d5b5e3cd4de167881aa8a60e9e77b199824176818089529_prof);
 
     }
 
@@ -95,7 +102,7 @@ class __TwigTemplate_b78dfcdbcb13df30f815364d51c076cc2d38dc9b78aef6b78d4abc74f6a
 
     public function getDebugInfo()
     {
-        return array (  75 => 42,  73 => 41,  46 => 16,  44 => 15,  33 => 7,  25 => 1,);
+        return array (  82 => 46,  80 => 45,  52 => 20,  46 => 16,  44 => 15,  33 => 7,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -126,8 +133,12 @@ class __TwigTemplate_b78dfcdbcb13df30f815364d51c076cc2d38dc9b78aef6b78d4abc74f6a
 
     <!-- corp -->
 \t\t\t<div class=\"jumbotron\">
+\t\t\t\t<div >
+\t\t\t\t\t{{ info }}
+\t\t\t\t\t</br>
+\t\t\t\t</div>
 \t\t\t\t <form class=\"form-signin\" action=\"authentification\" method=\"post\">
-\t\t\t\t\t<h2 class=\"form-signin-heading\">Enregistrez vous</h2>
+\t\t\t\t\t<h2 class=\"form-signin-heading\">Authentifiez-vous</h2>
 
 \t\t\t\t\t<label for=\"inputEmail\" class=\"sr-only\">Adresse Email</label>
 \t\t\t\t\t<input type=\"username\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Adresse email\" required autofocus>

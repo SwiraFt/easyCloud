@@ -16,53 +16,68 @@ class UserController extends Controller
 
     $requete = $request->request->all();
 
-    //return new Response ('NB param: ' .count($requete). ' '. $request);
+    if($requete['pseudo'] == NULL)
+      return $this->render('ECeasyCloudBundle:Default:inscription.html.twig', array('info' => 'Merci d\'entrer un pseudo.',
+                                                                                      'pseudo' => '',
+                                                                                       'pass' => '',
+                                                                                        'passConf' => '',
+                                                                                         'mail' => $requete['mail']));
 
-    if($requete['pseudo'] != NULL && $requete['pass'] != NULL  && $requete['mail'] != NULL && $requete['pass'] == $requete['passConf']){
+    if($requete['pass'] == NULL)
+      return $this->render('ECeasyCloudBundle:Default:inscription.html.twig', array('info' => 'Merci d\'entrer un mot de passe.',
+                                                                                      'pseudo' => $requete['pseudo'],
+                                                                                       'pass' => '',
+                                                                                        'passConf' => '',
+                                                                                         'mail' => $requete['mail'],));
 
+    if($requete['pass'] != $requete['passConf'])
+      return $this->render('ECeasyCloudBundle:Default:inscription.html.twig', array('info' => 'Les mots de passes entrés ne corespondent pas.',
+                                                                                        'pseudo' => $requete['pseudo'],
+                                                                                         'pass' => '',
+                                                                                          'passConf' => '',
+                                                                                           'mail' => $requete['mail'],));
+
+    if(!strstr($requete['mail'], '@') || !strstr($requete['mail'], '.'))
+    return $this->render('ECeasyCloudBundle:Default:inscription.html.twig', array('info' => 'Merci d\'entrer une adresse Email correcte.',
+                                                                                      'pseudo' => $requete['pseudo'],
+                                                                                       'pass' => $requete['pass'],
+                                                                                        'passConf' => $requete['passConf'],
+                                                                                         'mail' => '',));
+
+
+    $userSimilaire = $this->getDoctrine()->getRepository('ECeasyCloudBundle:User')->findByPseudo($requete['pseudo']);
+
+    if($userSimilaire)
+    return $this->render('ECeasyCloudBundle:Default:inscription.html.twig', array('info' => 'Le pseudo existe déja.',
+                                                                                      'pseudo' => '',
+                                                                                       'pass' => $requete['pass'],
+                                                                                        'passConf' => $requete['passConf'],
+                                                                                         'mail' => $requete['mail'],));
+
+   $userSimilaire = $this->getDoctrine()->getRepository('ECeasyCloudBundle:User')->findByMail($requete['mail']);
+   if($userSimilaire)
+   return $this->render('ECeasyCloudBundle:Default:inscription.html.twig', array('info' => 'L\'adresse Email que vous avez entré est déja utilisée.',
+                                                                                     'pseudo' => '',
+                                                                                      'pass' => $requete['pass'],
+                                                                                       'passConf' => $requete['passConf'],
+                                                                                        'mail' => $requete['mail'],));
+
+    else{
       $User= new User();
       $User->setPseudo($requete['pseudo']);
-      $User->setPass($requete['pass']);
+      $User->setPass(password_hash($requete['pass'], PASSWORD_DEFAULT));
       $User->setMail($requete['mail']);
       $User->setDerniereCo(DateTime::createFromFormat('j-M-Y', date('j-M-Y')));
-
 
       $em = $this->getDoctrine()->getManager();
       $em->persist($User);
       $em->flush();
 
-      //return new Response('L\'utilisateur à été enregistré avec l\'id : '. $User->getId());
-      return new Response(
-        '<html>
-        <head>
-        <meta http-equiv="refresh" content="3; url=/authentification" />
-    </head>
-        <body>
-        <p style=align="center">
-        Vous avez bien été enregistré, vous aller être redirigé sur la page d\'authentification.
-        </p>
-        </body>
-        </html>'
-      );
 
+      return $this->render('ECeasyCloudBundle:Default:index.html.twig', array('info' => 'Vous avez bien été enregistré, vous pouvez maintenant vous connecter.'));
 
-    }
-    else{
-      return new Response(
-        '<html>
-        <head>
-        <meta http-equiv="refresh" content="3; url=/inscription" />
-    </head>
-        <body>
-        <p style=align="center">
-        Certaines informations sont éronnées, merci de remplir correctement le formulaire.
-        </p>
-        </body>
-        </html>'
-      );
     }
 
   }
-
 }
  ?>

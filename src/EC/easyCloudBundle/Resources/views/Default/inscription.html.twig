@@ -17,19 +17,24 @@
 
 			<!-- //Corps -->
 			<div class="jumbotron">
+				<div >
+					{{ info }}
+				</br>
+				</div>
+
 			  <form class="inscription" action="/inscription" method="post">
 
 				<label for="inputUserName class="sr-only">Nom d'Utilisateur</label>
-				<input type="text" name="pseudo" class="form-control" placeholder="Nom d'Utilisateur" required autofocus>
+				<input type="text" name="pseudo" class="form-control" {% if pseudo != '' %} value={{ pseudo }} {% endif %} placeholder="Nom d'Utilisateur" required autofocus>
 
 				<label for="inputPassword" class="sr-only">Mot de passe</label>
-				<input type="password" name="pass"  class="form-control" placeholder="Mot de passe" required autofocus>
+				<input type="password" name="pass"  class="form-control" {% if pass != '' %} value={{ pass }} {% endif %} placeholder="Mot de passe" required autofocus>
 
 				<label for="inputPassword" class="sr-only">Confirmer le mot de passe</label>
-				<input type="password" name="passConf"  class="form-control" placeholder="Confirmer le mot de passe" required autofocus>
+				<input type="password" name="passConf"  class="form-control" {% if passConf != '' %} value={{ passConf }} {% endif %} placeholder="Confirmer le mot de passe" required autofocus>
 
 				<label for="inputUserName class="sr-only">Email</label>
-				<input type="text" name="mail" class="form-control" placeholder="Adresse Mail" required autofocus>
+				<input type="text" name="mail" class="form-control" {% if mail != '' %} value={{ mail }} {% endif %} placeholder="Adresse Mail" required autofocus>
 
 				<button type="submit">S'inscrire</button>
 			  </form>

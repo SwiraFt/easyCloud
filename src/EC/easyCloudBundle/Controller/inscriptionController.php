@@ -7,6 +7,10 @@ class inscriptionController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('ECeasyCloudBundle:Default:inscription.html.twig');
+        return $this->render('ECeasyCloudBundle:Default:inscription.html.twig', array( 'info' => '',
+                                                                                        'pseudo' => '',
+                                                                                         'pass' => '',
+                                                                                          'passConf' => '',
+                                                                                           'mail' => '',));
     }
 }

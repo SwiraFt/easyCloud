@@ -8,6 +8,6 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('ECeasyCloudBundle:Default:index.html.twig');
+        return $this->render('ECeasyCloudBundle:Default:index.html.twig', array( 'info' => ''));
     }
 }
