@@ -4,9 +4,6 @@ namespace EC\easyCloudBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\HttpFoundation\Session\Session;
 use EC\easyCloudBundle\Entity\User;
 use \DateTime;
@@ -66,7 +63,7 @@ class UserController extends Controller
     else{
       $User= new User();
       $User->setPseudo($requete['pseudo']);
-      $User->setPass(password_hash($requete['pass'], PASSWORD_DEFAULT));
+      $User->setPass(password_hash($requete['pass'], PASSWORD_BCRYPT));
       $User->setMail($requete['mail']);
       $User->setDerniereCo(DateTime::createFromFormat('j-M-Y', date('j-M-Y')));
 
@@ -87,7 +84,8 @@ class UserController extends Controller
 
     $User = $this->getDoctrine()->getRepository('ECeasyCloudBundle:User')->findByPseudo($requete['pseudo']);
 
-    if(strcmp($User[0]->getPass(), $requete['pass'] == 0)){
+
+    if(password_verify( $requete['pass'] , $User[0]->getPass() )){
       $session = $request->getSession();
       $session->set('pseudo', $User[0]->getPseudo());
       return $this->redirect('/repertoire');
