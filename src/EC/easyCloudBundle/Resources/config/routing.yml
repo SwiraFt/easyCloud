@@ -22,3 +22,23 @@ e_ceasy_cloud_repertoire:
    path:     /repertoire
    defaults: { _controller: ECeasyCloudBundle:Repertoire:afficherRepertoire }
    methods:   [GET]
+
+e_ceasy_cloud_telecharger:
+   path:     /telecharger/{fichier}
+   defaults: { _controller: ECeasyCloudBundle:Repertoire:telechargerFichier }
+   methods:   [GET]
+
+e_ceasy_cloud_upload:
+   path:     /upload
+   defaults: { _controller: ECeasyCloudBundle:Repertoire:televerserFichier }
+   methods:   [POST]
+
+e_ceasy_cloud_supprimer:
+   path:     /supprimer/{fichier}
+   defaults: { _controller: ECeasyCloudBundle:Repertoire:supprimerFichier }
+   methods:   [GET]
+
+e_ceasy_cloud_deco:
+   path:     /deconnexion
+   defaults: { _controller: ECeasyCloudBundle:User:deconnexion }
+   methods:   [GET]

@@ -10,4 +10,5 @@ namespace EC\easyCloudBundle\Repository;
  */
 class UserRepository extends \Doctrine\ORM\EntityRepository
 {
+
 }

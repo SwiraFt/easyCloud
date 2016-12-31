@@ -2,7 +2,6 @@
 namespace EC\easyCloudBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\Session;
 use EC\easyCloudBundle\Entity\User;
@@ -71,6 +70,9 @@ class UserController extends Controller
       $em->persist($User);
       $em->flush();
 
+      $dossierUtilisateurs = $this->get('kernel')->getRootDir() . '/../web/bundles/répertoires/';
+      $res = mkdir($dossierUtilisateurs . $requete['pseudo']);
+
 
       return $this->render('ECeasyCloudBundle:Default:index.html.twig', array('info' => 'Vous avez bien été enregistré, vous pouvez maintenant vous connecter.'));
 
@@ -97,6 +99,11 @@ class UserController extends Controller
 
 
 
+  }
+
+  public function deconnexionAction(Request $request){
+    $request->getSession()->clear();
+    return $this->redirect("/");
   }
 
 

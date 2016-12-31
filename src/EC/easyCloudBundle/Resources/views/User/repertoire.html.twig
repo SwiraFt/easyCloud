@@ -4,9 +4,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="HandheldFriendly" content="true" />
-		<link rel="stylesheet" href="{{ asset('bundles/style/css/bootstrap.css') }}" />
+		<link rel="stylesheet" href="{{ asset('bundles/bootstrap/css/bootstrap.css') }}" />
 
-		<title>Accueil</title>
+		<title>Envoi de fichier</title>
 	</head>
 
 	<body>
@@ -16,8 +16,40 @@
 
 			<div class="jumbotron">
 				<div >
-					{{ info }}
+					<fieldset>
+          	<legend>Envoi de fichier</legend>
+							<form method="POST" action="/upload" enctype="multipart/form-data">
+							  <!-- On limite le fichier à 100Ko -->
+							  <input type="hidden" name="MAX_FILE_SIZE" value="1000000">
+							  	<label for="fichier">Emplacement du fichier</label>
+									<input type="file" name="file" id="file" value="" />
+							    <input type="submit" name="envoyer" value="Envoyer le fichier">
+				 				</form>000
+					</fieldset>
 				</br>
+
+					<fieldset>
+						<table class="table table-striped">
+							<tr>
+		 						<th>Nom du fichier</th>
+		 						<th>Taille</th>
+		 						<th>Date d'ajout</th>
+ 							</tr>
+							{% for fichier in repertoire %}
+							<tr>
+								<th>{{ fichier.nom }}</th>
+								<th>{{ fichier.taille ~ " octets" }}</th>
+								<th>{{ fichier.date }}</th>
+								<th><a href={{"/telecharger/" ~ fichier.nom }} >Telechargez le document</a></th>
+								<th><a href={{"/supprimer/" ~ fichier.nom }} >Supprimer le document</a></th>
+							</tr>
+								{% else %}
+		    				Aucun fichier dans votre repertoire.
+		    			{% endfor %}
+						</table>
+
+
+					</fieldset>
 				</div>
 			</div> <!-- /jumbotron -->
 		</div> <!-- /container -->

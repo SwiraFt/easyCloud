@@ -161,6 +161,50 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
         not_e_ceasy_cloud_repertoire:
 
+        // e_ceasy_cloud_telecharger
+        if (0 === strpos($pathinfo, '/telecharger') && preg_match('#^/telecharger/(?P<fichier>[^/]++)$#s', $pathinfo, $matches)) {
+            if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                $allow = array_merge($allow, array('GET', 'HEAD'));
+                goto not_e_ceasy_cloud_telecharger;
+            }
+
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'e_ceasy_cloud_telecharger')), array (  '_controller' => 'EC\\easyCloudBundle\\Controller\\RepertoireController::telechargerFichierAction',));
+        }
+        not_e_ceasy_cloud_telecharger:
+
+        // e_ceasy_cloud_upload
+        if ($pathinfo === '/upload') {
+            if ($this->context->getMethod() != 'POST') {
+                $allow[] = 'POST';
+                goto not_e_ceasy_cloud_upload;
+            }
+
+            return array (  '_controller' => 'EC\\easyCloudBundle\\Controller\\RepertoireController::televerserFichierAction',  '_route' => 'e_ceasy_cloud_upload',);
+        }
+        not_e_ceasy_cloud_upload:
+
+        // e_ceasy_cloud_supprimer
+        if (0 === strpos($pathinfo, '/supprimer') && preg_match('#^/supprimer/(?P<fichier>[^/]++)$#s', $pathinfo, $matches)) {
+            if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                $allow = array_merge($allow, array('GET', 'HEAD'));
+                goto not_e_ceasy_cloud_supprimer;
+            }
+
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'e_ceasy_cloud_supprimer')), array (  '_controller' => 'EC\\easyCloudBundle\\Controller\\RepertoireController::supprimerFichierAction',));
+        }
+        not_e_ceasy_cloud_supprimer:
+
+        // e_ceasy_cloud_deco
+        if ($pathinfo === '/deconnexion') {
+            if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                $allow = array_merge($allow, array('GET', 'HEAD'));
+                goto not_e_ceasy_cloud_deco;
+            }
+
+            return array (  '_controller' => 'EC\\easyCloudBundle\\Controller\\UserController::deconnexionAction',  '_route' => 'e_ceasy_cloud_deco',);
+        }
+        not_e_ceasy_cloud_deco:
+
         // homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

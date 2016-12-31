@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="HandheldFriendly" content="true" />
-		<link rel="stylesheet" href="{{ asset('bundles/style/css/bootstrap.css') }}" />
+		<link rel="stylesheet" href="{{ asset('bundles/bootstrap/css/bootstrap.css') }}" />
 
 		<title>Formulaire d'inscription</title>
 	</head>
@@ -34,7 +34,7 @@
 				<label for="inputPassword" class="sr-only">Confirmer le mot de passe</label>
 				<input type="password" name="passConf"  class="form-control" {% if passConf != '' %} value={{ passConf }} {% endif %} placeholder="Confirmer le mot de passe" required autofocus>
 
-				<label for="inputUserName class="sr-only">Email</label>
+				<label for="inputEmail" class="sr-only">Email</label>
 				<input type="text" name="mail" class="form-control" {% if mail != '' %} value={{ mail }} {% endif %} placeholder="Adresse Mail" required autofocus>
 
 				<button class="btn btn-lg btn-primary btn-block" type="submit">S'inscrire</button>
