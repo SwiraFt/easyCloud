@@ -16,6 +16,10 @@ e_ceasy_cloud_inscriptionPost:
 
 e_ceasy_cloud_accueilPost:
    path:     /authentication
-   defaults: { _controller: ECeasyCloudBundle:User:AuthentificationAction}
+   defaults: { _controller: ECeasyCloudBundle:User:Authentification }
    methods:   [POST]
-   
+
+e_ceasy_cloud_accueilPost:
+   path:     /deconnexion
+   defaults: { _controller: ECeasyCloudBundle:User:deconnexion }
+   methods:   [GET]

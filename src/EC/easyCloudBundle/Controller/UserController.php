@@ -80,7 +80,7 @@ class UserController extends Controller
 
   }
 
-  public function DeconnexionAction (Request $request){
+  public function deconnexionAction (Request $request){
     session_start();
 
     // Suppression des variables de session et de la session

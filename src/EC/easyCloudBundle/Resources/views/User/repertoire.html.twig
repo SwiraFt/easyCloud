@@ -26,13 +26,16 @@
 							    <input type="submit" name="envoyer" value="Envoyer le fichier">
 				 				</form>
 					</fieldset>
+
 					<fieldset>
 						<legend>Envoi de fichier</legend>
-							{% for fichier in repertoire %}
-		        		<li><a href="repertoire/fichier">{{ fichier.fichiers|e }}</a></li>
+						<ul>
+							{% for fichier in repertoires %}
+							<li>{{ fichier.nom }}</li><li>{{ fichier.taille  ~ octets }}</li><li>{{ fichier.date }}</li><li><a href= {{ chemin ~ fichier.nom }} >Telechargez le document</a></li>
 								{% else %}
 		    				Aucun fichiers dans votre repertoire.
 		    			{% endfor %}
+						</ul>
 					</fieldset>
 				</div>
 			</div> <!-- /jumbotron -->
