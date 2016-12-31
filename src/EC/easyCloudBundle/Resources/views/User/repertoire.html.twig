@@ -4,30 +4,41 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="HandheldFriendly" content="true" />
-		<link rel="stylesheet" href="../bootstrap/css/bootsrap.css" />
+		<link rel="stylesheet" href="{{ asset('bundles/style/css/bootstrap.css') }}" />
 
-		<title>Accueil</title>
+		<title>Envoi de fichier</title>
 	</head>
 
 	<body>
 		<div class="container">
 
-			<!-- Fichier du menu-->
-			<?php include("menu.php"); ?>
+			{% include 'commun/menu.html' %}
 
-			<!--Corps-->
 			<div class="jumbotron">
-				<form method="POST" action="/repertoire" enctype="multipart/form-data">
-			     <!-- On limite le fichier à 100Ko -->
-			     <input type="hidden" name="MAX_FILE_SIZE" value="100000">
-			     Fichier : <input type="file" name="fichier">
-			     <input type="submit" name="envoyer" value="Envoyer le fichier">
-		 		</form>
-
+				<div >
+					<fieldset>
+          	<legend>Envoi de fichier</legend>
+							<form method="POST" action="upload.php" enctype="multipart/form-data">
+							  <!-- On limite le fichier à 100Ko -->
+							  <input type="hidden" name="MAX_FILE_SIZE" value="100000">
+							  	<label for="fichier">Emplacement du fichier</label>
+									<input type="file" name="fichier">
+							    <input type="submit" name="envoyer" value="Envoyer le fichier">
+				 				</form>
+					</fieldset>
+					<fieldset>
+						<legend>Envoi de fichier</legend>
+							{% for fichier in repertoire %}
+		        		<li><a href="repertoire/fichier">{{ fichier.fichiers|e }}</a></li>
+								{% else %}
+		    				Aucun fichiers dans votre repertoire.
+		    			{% endfor %}
+					</fieldset>
+				</div>
 			</div> <!-- /jumbotron -->
 		</div> <!-- /container -->
 
-			<!-- Fichier de pied de page-->
-			<?php include("piedDePage.php"); ?>
+			{% include 'commun/piedDePage.html' %}
+
 	</body>
 </html>
