@@ -40,7 +40,7 @@ class RepertoireController extends Controller
     {
       //$requete = $this->get('request');
       $path = $this->get('kernel')->getRootDir(). "/../web/bundles/repertoires/" . $request->getSession()->get('pseudo')."/";
-      $content = file_get_contents($path.$fichier);
+      $content = file_get_contents($path.$fichier . ".png");
 
       $response = new Response();
 
